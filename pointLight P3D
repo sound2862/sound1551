@@ -1,0 +1,6 @@
+//6주차 빛을받는 구 만들기 , p3d로 3d환경을 구축하고 sphere와 noStroke로 깔끔한 구를 생성후  pointLight를 통해 Z좌표 380에서 부터 노란색의 빛을 구에 보낸다.
+size(400,400,P3D);
+noStroke();
+pointLight(255,255,0,0,0,380);
+translate(200,200,0);
+sphere(160);
