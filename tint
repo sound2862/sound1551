@@ -1,0 +1,17 @@
+//3주차 투명도(Transparency) 조절,  image(img, 0, 0); 를 이용해 불투명한 이미지를 호출하고 tint(255, 127); 이하를 이용해 반투명한 사진을 덮어씌우고 마우스의 좌우 위치에 따라 사진이 이동할수있게 만들었다. 
+PImage img;
+float offset = 0;
+float easing = 0.05;
+
+void setup() {
+  size(640, 360);
+  img = loadImage("moonwalk.jpg");
+}
+
+void draw() { 
+  image(img, 0, 0); 
+  float dx = (mouseX-img.width/2) - offset;
+  offset += dx * easing; 
+  tint(255, 127);
+  image(img, offset, 0);
+}
