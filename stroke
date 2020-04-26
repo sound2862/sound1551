@@ -1,0 +1,11 @@
+//1주차 선 그리기 ,stroke를 이용해서 선을 그리고 if(mousePressed)이하를 이용해서 마우스의 클릭과 이동에 따라 선이 그려나가게 되는 코드이다.
+void setup(){
+  size(550,550);
+  strokeWeight(16);
+  stroke(0,0,255);
+ }
+ void draw(){
+   if(mousePressed)
+   line(pmouseX,pmouseY,mouseX,mouseY);
+ }
+ 
